@@ -21,6 +21,8 @@ minify.addEventListener("click", () => {
   try {
     let formatted = JSON.stringify(JSON.parse(input.value));
     output.value = formatted;
+
+    line_counter();
   } catch (err) {
     output.value = err.message;
   }
