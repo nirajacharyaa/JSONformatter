@@ -58,3 +58,28 @@ body {
     flex-direction: row;
   }
 }
+
+#codeEditor,
+#lineCounter {
+  margin: 0;
+  overflow-x: hidden;
+  border: none;
+}
+
+#lineCounter {
+  width: 0%;
+  background-color: transparent;
+  color: #ffffff;
+  overflow-y: hidden;
+}
+
+#codeEditor {
+  padding: 2rem;
+  margin-right: 5%;
+  width: 100%;
+}
+
+#lineCounter:focus-visible,
+#codeEditor:focus-visible {
+  outline: none;
+}
