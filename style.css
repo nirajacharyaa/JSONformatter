@@ -13,12 +13,13 @@ body {
   position: relative;
   display: inline-block;
   left: 0px;
-  top: -8px;
-  width: 60px;
-  height: 34px;
+  top: -5px;
+  width: 41px;
+  height: 23px;
 }
 .icon{
-  padding-top: 15px;
+  padding-top: 20px;
+  width: 1.2rem;
 
 }
 /* Hide default HTML checkbox */
@@ -32,10 +33,10 @@ body {
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
+  top: 3px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -3px;
   background-color: #ccc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -44,10 +45,10 @@ body {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -62,16 +63,18 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 27px;
 }
-
+.icons-modes{
+  margin-left: 49px;
+}
 .slider.round:before {
   border-radius: 50%;
 }
@@ -85,6 +88,7 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  margin-top: -30px;
 }
 .container textarea {
   margin: 3rem;
@@ -142,7 +146,7 @@ input:checked + .slider:before {
 #lineCounter {
   width: 0%;
   background-color: transparent;
-  color: #ffffff;
+  color: #888888;
   overflow-y: hidden;
 }
 
