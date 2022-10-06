@@ -13,7 +13,6 @@ keymap.set("'","'");
 keymap.set('"','"');
 
 const seen_indices = new Map();
-seen_init = new Array(0,1,5,7,13);
 
 
 prettify.addEventListener("click", () => {
