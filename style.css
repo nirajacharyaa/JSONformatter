@@ -80,7 +80,7 @@ input:checked + .slider:before {
 }
 /*theme switch*/
 :has(.switch #light-theme-toggler:checked) {
-  background-color: #e2e0e0;
+  background-color: #e8e8e8;
   color: black;
 }
 .container {
