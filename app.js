@@ -5,6 +5,16 @@ const minify = document.querySelector(".minify");
 var codeEditor = document.getElementById("codeEditor");
 var lineCounter = document.getElementById("lineCounter");
 
+const keymap = new Map();
+keymap.set('{','}');
+keymap.set('[',']');
+keymap.set('(',')');
+keymap.set("'","'");
+keymap.set('"','"');
+
+const seen_indices = new Map();
+
+
 prettify.addEventListener("click", () => {
   try {
     let formatted = JSON.stringify(JSON.parse(input.value), null, 4);
@@ -64,3 +74,34 @@ function line_counter() {
 codeEditor.addEventListener("input", () => {
   line_counter();
 });
+
+
+input.addEventListener('keyup',(e)=>{
+
+  var a = Array.from(input.value);
+  var cur = e.target.selectionStart;
+  if (seen_indices.has(cur-1) || cur === 1 || cur === 2 || cur === 6 || cur === 8 || cur === 14 ){
+    return
+  }
+  autocomplete(a, cur);
+})
+
+function autocomplete(a, cur){
+
+  console.log(cur);
+
+    if(keymap.has(a[cur-1])){
+      
+      a.splice(cur,0,keymap.get(a[cur-1]));
+      console.log(a);
+      a = a.join("");
+      seen_indices.set(cur-1,true)
+      if(a[cur-1] === "'" || a[cur-1] === `"`){
+        seen_indices.set(cur,true);
+      }
+      input.value = a;
+      input.setSelectionRange(cur,cur);
+    }
+
+}
+
