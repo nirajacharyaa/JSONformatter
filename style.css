@@ -17,10 +17,13 @@ body {
   width: 41px;
   height: 23px;
 }
-.icon{
+.sun-icon{
   padding-top: 20px;
   width: 1.2rem;
-
+}
+.moon-icon{
+  padding-top: 19px;
+  width: 1.1rem;
 }
 /* Hide default HTML checkbox */
 .switch input {
