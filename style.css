@@ -113,16 +113,22 @@ input:checked + .slider:before {
 
 .btns button {
   display: block;
-  margin: 1rem;
-  padding: 0.5rem 1.5rem;
+  margin: 2rem;
+  padding: 1rem ;
   width: 6rem;
-  background-color: rgb(27, 145, 56);
+  background-color: rgb(74, 158, 227);
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.4rem;
   color: #fff;
+  font-weight: 700;
+  font-family:  sans-serif;
+  transition: 0.2s;
 }
 .btns button:hover {
   cursor: pointer;
+  background-color:  rgba(0, 0, 0, 0.82);
+
+
 }
 
 @media screen and (max-width: 600px) {
@@ -162,4 +168,39 @@ input:checked + .slider:before {
 #lineCounter:focus-visible,
 #codeEditor:focus-visible {
   outline: none;
+}
+
+
+
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
 }
